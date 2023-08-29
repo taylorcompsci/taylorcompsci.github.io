@@ -1,0 +1,102 @@
+:root{
+    --font-color: rgb(50,50,50);
+    --bg-light-blue: rgb(242,242,247);
+    --light-transp-blue: rgb(0,0,50,0.1);
+    --dark-transp-blue:rgba(0,0,50,.3);
+    --light-shadow: 0 10px 30px rgb(0,0,50,0.1);
+    --pretty-green: rgb(140,223,130);
+    --pretty-yellow: rgb(255 216 107);
+    --pretty-red:rgb(255 109 109);
+    --pretty-purple:rgb(245 152 229);
+    --pretty-blue:rgb(98 168 239);
+    --logo-blue:rgb(1 66 155);
+    --navbar-gap: max(12vh,100px);
+    --lighter-font-color: rgb(111,111,111);
+}
+
+
+body{
+    margin:0;
+    background: var(--bg-light-blue);
+    font-family: 'Poppins';
+    color:var(--font-color);
+}
+
+
+#navbar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 2px solid var(--light-transp-blue);
+    backdrop-filter: blur(20px);
+    background: rgba(242,242,247,0.7);
+}
+
+#sideLinks a{
+    font-size: 20px;
+    font-weight: 600;
+    transition: .25s;
+    cursor: pointer;
+    margin-left:40px;
+    text-decoration: none;
+    opacity: .6;
+}
+
+#sideLinks a:hover{
+    opacity: 1;
+}
+
+.faceHolder{
+    display: flex;
+    justify-content: space-around;
+    margin:auto;
+    margin-top: 15vh;
+}
+
+.logo{
+    font-weight: 600;
+    margin:0;
+}
+
+.logo img{
+    width: 60px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.faceHolder img{
+    width: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 0 100px var(--pretty-blue);
+    border:5px solid var(--bg-light-blue);
+}
+
+#landingTitle{
+    text-align: center;
+    font-size: 150px;
+    margin:0;
+    margin-bottom: 25px;
+    font-family: 'Bebas Neue';
+
+    background: linear-gradient(to right, var(--logo-blue),rgb(0 243 223));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sectionHeader{
+    font-family: 'Bebas Neue';
+    font-size: 80px;
+}
+
+.sectionHeader span{
+    color:var(--logo-blue);
+}
