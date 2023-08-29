@@ -47,6 +47,7 @@ body{
     margin-left:40px;
     text-decoration: none;
     opacity: .6;
+    color:var(--font-color);
 }
 
 #sideLinks a:hover{
@@ -65,6 +66,15 @@ body{
     border-radius: 50%;
     vertical-align: middle;
     margin-right: 10px;
+}
+
+
+/* MOBILE NAVBAR */
+#mobileNavbar{
+    display: none;
+}
+#burgerMenu{
+    display: none;
 }
 
 /* LANDING SCENE */
@@ -97,6 +107,11 @@ body{
 }
 
 
+#landingSub{
+    text-align: center;
+    margin-bottom:-30px;
+}
+
 /* WIDGETS */
 .widget{
     width: 80%;
@@ -128,6 +143,29 @@ body{
     font-size:20px;
     font-weight: 600;
     margin:0;
+}
+
+/* OFFICER SLIDES */
+#officerSlide{
+    width:80%;
+    max-width: 400px;
+    margin:auto;
+    border:2px solid var(--light-transp-blue);
+    padding:10px;
+    border-radius: 12px;
+}
+
+#officerSlide img{
+    width: 100%;
+    border-radius: 12px;
+}
+
+
+/* FOOTER */
+#footer{
+    width: 100%;
+    padding-top: 15vh;
+    background:linear-gradient(to bottom, transparent, rgb(98 168 239 / 30%));
 }
 
 /* GENERAL */
@@ -173,3 +211,60 @@ body{
     border-radius: 50%;
     border: 2px solid var(--light-transp-blue);
 }
+
+
+@media screen and (max-width: 850px) {
+    .faceHolder img{
+        width: 70px;
+        max-height: 70px;
+        margin-left:0 !important;
+    }
+
+    #face2,#face5,#face7,#face10{
+        display: none;
+    }
+
+    #landingTitle{
+        font-size: 80px;
+    }
+
+    #landingSub{
+        margin-bottom:-20px;
+    }
+
+    #navbar{
+        display:none;
+    }
+    #mobileNavbar{
+        display: flex;
+        position: fixed;
+        left:0;
+        right:0;
+        top:0;
+        padding:10px;
+        border-bottom:2px solid var(--light-transp-blue);
+        backdrop-filter: blur(20px);
+        background: rgba(242,242,247,0.7);
+        z-index: 9999;
+    }
+
+    #burgerMenu{
+        position: fixed;
+        z-index:999;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        backdrop-filter: blur(20px);
+        background: rgba(242,242,247,0.7);
+        display:grid;
+        justify-content: center;
+        opacity: 0;
+        pointer-events: none;
+        transition:.5s;
+    }
+
+    .bigGap{
+        height: 50px;
+    }
+  }
