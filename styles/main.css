@@ -22,7 +22,7 @@ body{
     color:var(--font-color);
 }
 
-
+/* NAVBAR */ 
 #navbar{
     position: fixed;
     left: 0;
@@ -38,6 +38,7 @@ body{
     background: rgba(242,242,247,0.7);
 }
 
+/* side links */
 #sideLinks a{
     font-size: 20px;
     font-weight: 600;
@@ -52,13 +53,8 @@ body{
     opacity: 1;
 }
 
-.faceHolder{
-    display: flex;
-    justify-content: space-around;
-    margin:auto;
-    margin-top: 15vh;
-}
 
+/* logo */
 .logo{
     font-weight: 600;
     margin:0;
@@ -69,6 +65,14 @@ body{
     border-radius: 50%;
     vertical-align: middle;
     margin-right: 10px;
+}
+
+/* LANDING SCENE */
+.faceHolder{
+    display: flex;
+    justify-content: space-around;
+    margin:auto;
+    margin-top: 15vh;
 }
 
 .faceHolder img{
@@ -92,11 +96,79 @@ body{
     -webkit-text-fill-color: transparent;
 }
 
+
+/* WIDGETS */
+.widget{
+    width: 80%;
+    margin:auto;
+    max-width: 400px;
+    padding:10px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    box-shadow: 0 20px 30px var(--light-transp-blue);
+    margin-top: 30px;
+    border-radius: 12px;
+    border:2px solid var(--light-transp-blue);
+    transition: .5s;
+}
+
+.widget:hover{
+    box-shadow: none;
+}
+
+.widget img{
+    padding:10px;
+    background:var(--pretty-blue);
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.widget p{
+    font-size:20px;
+    font-weight: 600;
+}
+
+/* GENERAL */
+
+.bigGap{
+    height: 10vh;
+}
+
 .sectionHeader{
     font-family: 'Bebas Neue';
     font-size: 80px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.sectionSub{
+    font-size: 18px;
+    font-weight: 600;
+    opacity: .7;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+    display: block;
+    margin: auto;
 }
 
 .sectionHeader span{
-    color:var(--logo-blue);
+    color:rgb(7 137 180);
+}
+
+/* section dividers */
+.dividerLine{
+    width: 2px;
+    height: 15vh;
+    margin:auto;
+    background:var(--light-transp-blue);
+}
+
+.dividerCircle{
+    width: 10px;
+    height: 10px;
+    margin:auto;
+    border-radius: 50%;
+    border: 2px solid var(--light-transp-blue);
 }
