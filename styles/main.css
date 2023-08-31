@@ -308,6 +308,7 @@ body{
         right:0;
         bottom:0;
         backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         background: rgba(242,242,247,0.7);
         display:grid;
         justify-items: center;
