@@ -100,11 +100,10 @@ body{
 
 #landingTitle{
     text-align: center;
-    font-size: 150px;
+    font-size: 85px;
+    letter-spacing: -2px;
     margin:0;
     margin-bottom: 25px;
-    font-family: 'Bebas Neue';
-
     background: linear-gradient(to right, var(--logo-blue),rgb(0 243 223));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -274,14 +273,15 @@ body{
     }
 
     #landingTitle{
-        background:linear-gradient(to right, var(--logo-blue),rgb(2 170 195));
+        background: linear-gradient(to right, var(--logo-blue),rgb(2 170 195));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        font-size: 80px;
+        font-size: 50px;
     }
 
     #landingSub{
-        margin-bottom:-20px;
+        margin-bottom: -12px;
+        font-size: 20px;
     }
 
     #navbar{
