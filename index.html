@@ -21,7 +21,14 @@
 
         <!-- favicon -->
         <link rel="icon" href="assets/branding/logo-simple-round.png">
-        
+
+        <!-- slideshow pics -->
+        <link rel="preload" as="image" href="assets/officers/nolan.png">
+        <link rel="preload" as="image" href="assets/officers/jonathan.png">
+        <link rel="preload" as="image" href="assets/officers/rizky.png">
+        <link rel="preload" as="image" href="assets/officers/cutie.png">
+        <link rel="preload" as="image" href="assets/officers/iman.png">
+        <link rel="preload" as="image" href="assets/officers/william.png">
         <title>Taylor Computer Science</title>
          
     </head>
@@ -29,23 +36,32 @@
     <body>
 
         <div id="navbar">
-            <h2 class="logo"><img src="assets/branding/logo-simple.png">THS <b>CS Club</b></h2>
+            <a href="/" class="logo"><img src="assets/branding/logo-simple.png">THS <b>CS Club</b></a>
 
             <div id="sideLinks">
-                <a>Events</a>
                 <a href="faq.html">FAQ</a>
-                <a>Resources</a>
+                <a href="resources.html">Resources</a>
             </div>
         </div>
 
         <div id="mobileNavbar">
-            <a class="logo">
+            <a class="logo" href="/">
                 <img src="assets/branding/logo-simple.png">
             </a>
+
+            <img onclick="toggleBurger()" id="menuIcon" style="width:40px" src="assets/svg/menu.svg">
         </div>
 
         <div id="burgerMenu">
-
+            <a href="faq.html">FAQ</a>
+            <a href="resources.html">Resources</a>
+            <br><br>
+            <div class="appIcons">
+                <a href="https://www.instagram.com/jetcompsci/"><img src="assets/link-icons/insta.png"></a>
+                <a href="https://www.remind.com/join/thscsclub"><img src="assets/link-icons/remind.png"></a>
+                <a href="https://github.com/taylorcompsci/taylorcompsci.github.io"><img src="assets/link-icons/github.png"></a>
+                <a href="https://discord.gg/QZxb9ucG"><img src="assets/link-icons/discord.png"></a>
+            </div>
         </div>
 
 
@@ -63,6 +79,12 @@
 
         <h1 id="landingSub">JAMES E. TAYLOR</h1>
         <h1 id="landingTitle">COMPSCI CLUB</h1>
+        <div class="appIcons">
+            <a href="https://www.instagram.com/jetcompsci/"><img src="assets/link-icons/insta.png"></a>
+            <a href="https://www.remind.com/join/thscsclub"><img src="assets/link-icons/remind.png"></a>
+            <a href="https://github.com/taylorcompsci/taylorcompsci.github.io"><img src="assets/link-icons/github.png"></a>
+            <a href="https://discord.gg/QZxb9ucG"><img src="assets/link-icons/discord.png"></a>
+        </div>
 
 
         <div id="row2" class="faceHolder">
@@ -75,14 +97,11 @@
 
 
         <div class="bigGap"></div>
-        <div class="dividerLine"></div>
-        <div class="dividerCircle"></div>
-        <div class="dividerLine"></div>
         <div class="bigGap"></div>
 
 
         <div >
-            <h1 class="sectionHeader">You belong <span class="blueGradient">Here.</span></h1>
+            <h1 class="sectionHeader">YOU BELONG <span class="blueGradient">HERE.</span></h1>
             <p class="sectionSub">The Computer Science Club is devoted to furthering students’ interest and skill in CS beyond the school curriculum. </p>
 
             <div data-aos="fade-up" class="widget" ><img src="assets/svg/trophy.svg"><p>Competitions</p></div>
@@ -95,13 +114,11 @@
 
 
         <div class="bigGap"></div>
-        <div class="dividerLine"></div>
-        <div class="dividerCircle"></div>
-        <div class="dividerLine"></div>
+        <div class="bigGap"></div>
         <div class="bigGap"></div>
 
         <div data-aos="fade-in">
-            <h1 class="sectionHeader">Meet the <span class="blueGradient">Officers.</span></h1>
+            <h1 class="sectionHeader">MEET THE <span class="blueGradient">OFFICERS.</span></h1>
             <p class="sectionSub">The people dedicated to keeping this club running. </p>
             <div class="bigGap"></div>
 
@@ -113,13 +130,19 @@
         </div>
 
         <div class="bigGap"></div>
-        <div class="dividerLine"></div>
-        <div class="dividerCircle"></div>
-        <div class="dividerLine"></div>
-        <div class="bigGap"></div>
+        
 
 
-        <div id="footer"></div>
+        <div id="footer">
+            <div class="bigGap"></div>
+            <div class="appIcons">
+                <a href="https://www.instagram.com/jetcompsci/"><img src="assets/link-icons/insta.png"></a>
+                <a href="https://www.remind.com/join/thscsclub"><img src="assets/link-icons/remind.png"></a>
+                <a href="https://github.com/taylorcompsci/taylorcompsci.github.io"><img src="assets/link-icons/github.png"></a>
+                <a href="https://discord.gg/QZxb9ucG"><img src="assets/link-icons/discord.png"></a>
+            </div>
+            <br><br>
+        </div>
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
           AOS.init();
@@ -127,6 +150,7 @@
         <script src="scripts/parallax.js"></script>
         <script src="scripts/floating-heads.js"></script>
         <script src="scripts/navbar.js"></script>
+        <script src="scripts/slideshow.js"></script>
         
     </body>
     

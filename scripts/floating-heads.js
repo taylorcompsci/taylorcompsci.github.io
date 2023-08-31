@@ -18,7 +18,7 @@ for(let i of document.getElementById("row1").children){
     combo.push(green[2] * greenP + blue[2] * blueP);
 
     const vshift = 15 * Math.random() * randomChoice([1,-1]);
-    const hshift = 100 * Math.random() * randomChoice([1,-1]);
+    const hshift =  120 * Math.random() * randomChoice([1,-1]);
 
     i.style["box-shadow"] = `0 0 150px rgb(${combo[0]},${combo[1]},${combo[2]})`;
     i.style["margin-top"] = `${vshift}vh`;
@@ -43,7 +43,7 @@ for(let i of document.getElementById("row2").children){
     combo.push(green[2] * greenP + blue[2] * blueP);
 
     const vshift = 15 * Math.random() * randomChoice([1,-1]);
-    const hshift = 100 * Math.random() * randomChoice([1,-1]);
+    const hshift = 120 * Math.random() * randomChoice([1,-1]);
 
     i.style["box-shadow"] = `0 0 150px rgb(${combo[0]},${combo[1]},${combo[2]})`;
     i.style["margin-top"] = `${vshift}vh`;

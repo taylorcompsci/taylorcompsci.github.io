@@ -12,6 +12,7 @@
     --logo-blue:rgb(1 66 155);
     --navbar-gap: max(12vh,100px);
     --lighter-font-color: rgb(111,111,111);
+    --head-size: max(70px,min(10vw,120px));
 }
 
 
@@ -59,6 +60,9 @@ body{
 .logo{
     font-weight: 600;
     margin:0;
+    font-size: 1.5em;
+    text-decoration: none;
+    color:var(--font-color);
 }
 
 .logo img{
@@ -86,9 +90,9 @@ body{
 }
 
 .faceHolder img{
-    width: 100px;
-    max-width: 100px;
-    max-height: 100px;
+    width: var(--head-size);
+    max-width: var(--head-size);
+    max-height: var(--head-size);
     border-radius: 50%;
     box-shadow: 0 0 100px var(--pretty-blue);
     border:5px solid var(--bg-light-blue);
@@ -110,6 +114,31 @@ body{
 #landingSub{
     text-align: center;
     margin-bottom:-30px;
+}
+
+/* app icons */
+.appIcons{
+    display: flex;
+    justify-content: center;
+}
+
+.appIcons a{
+    display: block;
+    text-decoration: none;
+    padding:10px;
+    background:var(--light-transp-blue);
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: .5s;
+}
+
+.appIcons a:hover{
+    background:var(--dark-transp-blue);
+}
+
+.appIcons a img{
+    width: 50px;
+    display: block;
 }
 
 /* WIDGETS */
@@ -161,6 +190,25 @@ body{
 }
 
 
+/* slide buttons */
+#slideButtonHolder{
+    margin-top:50px;
+    display:flex;
+    justify-content: center;
+}
+.slideButton{
+    height: 10px;
+    width: 25px;
+    background:var(--light-transp-blue);
+    transition:.25s;
+    margin-left:15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.currentSlide,.slideButton:hover{
+    background:var(--dark-transp-blue);
+}
 /* FOOTER */
 #footer{
     width: 100%;
@@ -175,10 +223,13 @@ body{
 }
 
 .sectionHeader{
-    font-family: 'Bebas Neue';
-    font-size: 80px;
+    font-size: 50px;
+    width: 80%;
+    display: block;
+    margin:auto;
     text-align: center;
-    margin-bottom: 0;
+    margin-bottom: 20px;
+    line-height: 50px;
 }
 
 .sectionSub{
@@ -215,16 +266,17 @@ body{
 
 @media screen and (max-width: 850px) {
     .faceHolder img{
-        width: 70px;
-        max-height: 70px;
         margin-left:0 !important;
     }
 
-    #face2,#face5,#face7,#face10{
+    #face2,#face5,#face7,#face9,#face10{
         display: none;
     }
 
     #landingTitle{
+        background:linear-gradient(to right, var(--logo-blue),rgb(2 170 195));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         font-size: 80px;
     }
 
@@ -238,13 +290,13 @@ body{
     #mobileNavbar{
         display: flex;
         position: fixed;
+        justify-content: space-between;
         left:0;
         right:0;
         top:0;
         padding:10px;
         border-bottom:2px solid var(--light-transp-blue);
-        backdrop-filter: blur(20px);
-        background: rgba(242,242,247,0.7);
+        background: var(--bg-light-blue);
         z-index: 9999;
     }
 
@@ -258,10 +310,18 @@ body{
         backdrop-filter: blur(20px);
         background: rgba(242,242,247,0.7);
         display:grid;
-        justify-content: center;
+        justify-items: center;
         opacity: 0;
         pointer-events: none;
         transition:.5s;
+        align-content: center;
+    }
+
+    #burgerMenu a{
+        text-decoration: none;
+        font-size: 25px;
+        color:var(--lighter-font-color);
+        margin-bottom: 30px;
     }
 
     .bigGap{
