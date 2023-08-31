@@ -1,5 +1,5 @@
 const officerSlides = [
-    ["assets/officers/nolan.png", "NOLAN YEE - PRESIDENT", "Hi, I'm Nolan Yee and I'm going to be the Computer Science Club President! I'm super excited for the year and am ready to contribute to all teh fun things we do as a club"],
+    ["assets/officers/nolan.png", "NOLAN YEE - PRESIDENT", "Hi, I'm Nolan Yee and I'm going to be the Computer Science Club President! I'm super excited for the year and am ready to contribute to all the fun things we do as a club."],
     ["assets/officers/jonathan.png", "JONATHAN CUMMINS - VICE PRESIDENT", "Hi, I'm Jonathan Cummins the new vice president for the computer science club. There's a-lot I'm hoping to do with the club in the coming year and I'm excited to work with the other officers to get that and more done!"],
     ["assets/officers/rizky.png", "RIZKY PRATAMA - SECRETARY", "Hey all, I'm Rizky Pratama, your returning secretary for the 2023-2024 school year. I look forward to improving the good things we got going over here."],
     ["assets/officers/cutie.png", "SHILOH OLOTU - TREASURER", "Hi, I'm Shiloh Olotu and I'm gonna be the Computer Science Club Treasurer during the 2023-2024 school year! Y'all can trust me to make sure very dollar is spent wisely and responsibly!"],
