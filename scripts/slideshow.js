@@ -7,7 +7,7 @@ const officerSlides = [
     ["assets/officers/iman_akhtar.png", "IMAN AKHTAR - PARLIAMENTARIAN", "Hi! I'm Iman Akhtar, and I'm gonna be parliamentarian of the Computer Science Club! I'm super excited to be apart of this team, and I can't wait to see how this year unravels!"],
     ["assets/officers/william_dinh.png", "WILLIAM DINH - DIRECTOR OF OUTREACH", "Hey I'm William Dinh and I'm gonna be the director of outreach. I love my mom and the sound of keyboard switches. Definitely looking forward to being a part of this club."],
     ["assets/officers/vian_chen.png", "VIAN CHEN - DIRECTOR OF EDUCATION", ""],
-    ["assets/officers/nicholas_lovely.png", "NICHOLAS LOVELY - FRESHMEN REPRESENATIVE", ""],
+    ["assets/officers/nicholas_lovely.png", "NICHOLAS LOVELY - FRESHMEN REP", ""],
 ];
 
 let cur = 0;

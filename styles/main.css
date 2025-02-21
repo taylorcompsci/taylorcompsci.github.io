@@ -23,6 +23,15 @@ body{
     color:var(--font-color);
 }
 
+/* Default for images. Basically makes all images non selectable and highlightable */
+img {
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
 /* NAVBAR */ 
 #navbar{
     position: fixed;
