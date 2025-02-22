@@ -13,7 +13,7 @@ function toggleBurger(){
     }
 }
 
-function navbar(){
+const navbar = () => {
     return `        <div id="navbar">
             <a href="/" class="logo"><img src="assets/branding/logo-simple.png">THS <b>CS Club</b></a>
 
@@ -44,7 +44,10 @@ function navbar(){
         </div>`;
 }
 
-addEventListener("load", ()=>{
-    const body = document.querySelector("body");
-    body.innerHTML = navbar() + body.innerHTML;
-});
+// addEventListener("load", ()=>{
+//     const body = document.querySelector("body");
+//     body.innerHTML = navbar() + body.innerHTML;
+// });
+
+const body = document.querySelector("body");
+body.innerHTML = navbar() + body.innerHTML;

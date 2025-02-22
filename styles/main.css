@@ -292,6 +292,7 @@ img {
 
     #landingTitle{
         background: linear-gradient(to right, var(--logo-blue),rgb(2 170 195));
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-size: 50px;
@@ -347,3 +348,61 @@ img {
         height: 50px;
     }
   }
+
+  /* Projects Page */ 
+.grid{
+    justify-self: center;
+    display: block;
+    justify-content: center;
+    padding: 2vh;
+    text-align:center;
+    @media (hover) {
+        &:is(:hover, :focus-within) > .gridRow > .gridPiece:not(:hover, :focus-within) > img {
+            filter: grayscale(100%);
+        }
+    }
+    pointer-events: none;
+}
+
+
+.gridRow {
+    line-height: 0;
+    display: flex;
+    gap: 0.2vw;
+    padding-bottom: 0.2vw;
+}
+
+.gridPiece{
+    justify-self: flex-start;
+    vertical-align: bottom;
+    overflow: hidden;
+    display: inline-block;
+    pointer-events: auto;
+}
+
+.gridPiece > img {
+
+    width: 12.5vw;
+    height: 12.5vw;
+
+    max-width: 134px;
+    max-height: 134px;
+
+    overflow: hidden;
+    transition: all 0.15s linear 0s;
+    transition-property: transform, filter;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+
+/* @media screen and (){
+    
+} */
+
+
+.gridPiece:hover  > img {
+    transform:scale(1.2);
+    overlay: hidden;
+    cursor: pointer;
+}
