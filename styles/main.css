@@ -184,7 +184,8 @@ img {
 
 /* OFFICER SLIDES */
 #officerSlide{
-    width:80%;
+    width:80vw;
+    max-height: 800px;
     max-width: 400px;
     margin:auto;
     border:2px solid var(--light-transp-blue);
@@ -203,13 +204,16 @@ img {
 }
 
 #officerSlide p{
-    height: 15vh;
+    width: 100%;
+    text-overflow: ellipsis;
+    height: 20%
 }
 
 
 /* slide buttons */
 #slideButtonHolder{
-    margin-top:50px;
+    margin-top: 3%;
+    height: 20%;
     display:flex;
     justify-content: center;
 }

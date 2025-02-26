@@ -14,6 +14,7 @@ function toggleBurger(){
 }
 
 const navbar = () => {
+
     return `        <div id="navbar">
             <a href="/" class="logo"><img src="assets/branding/logo-simple.png">THS <b>CS Club</b></a>
 
@@ -28,7 +29,7 @@ const navbar = () => {
                 <img src="assets/branding/logo-simple.png">
             </a>
 
-            <img onclick="toggleBurger()" id="menuIcon" style="width:40px" src="assets/svg/menu.svg">
+            <img id="menuIcon" style="width:40px" src="assets/svg/menu.svg">
         </div>
 
         <div id="burgerMenu">
@@ -44,10 +45,11 @@ const navbar = () => {
         </div>`;
 }
 
-// addEventListener("load", ()=>{
-//     const body = document.querySelector("body");
-//     body.innerHTML = navbar() + body.innerHTML;
-// });
+
+
 
 const body = document.querySelector("body");
 body.innerHTML = navbar() + body.innerHTML;
+addEventListener("load", ()=>{
+    document.getElementById("menuIcon").addEventListener("click", toggleBurger);
+});
