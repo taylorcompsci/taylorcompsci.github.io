@@ -430,3 +430,23 @@ img {
 } */
 
 
+/* FAQ */
+/* this is a pretty primitive style. I'm sure if I like it or not yet. Please feel free to change it */
+.content {
+    justify-self: center;
+}
+
+
+
+.QA > .question {
+    font-weight: bold;
+    font-size: 3vw;
+    justify-self: left;
+    margin-bottom: 0;
+}
+
+.QA > .answer {
+    font-size: 2.75vw;
+    justify-self: left;
+    margin-top: 0;
+}

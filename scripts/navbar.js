@@ -19,8 +19,9 @@ const navbar = () => {
             <a href="/" class="logo"><img src="assets/branding/logo-simple.png">THS <b>CS Club</b></a>
 
             <div id="sideLinks">
-                <a href="faq.html">FAQ</a>
-                <a href="resources.html">Resources</a>
+                <a href="faq">FAQ</a>
+                <a href="resources">Resources</a>
+                <a href="projectPage">Projects</a>
             </div>
         </div>
 
@@ -33,8 +34,9 @@ const navbar = () => {
         </div>
 
         <div id="burgerMenu">
-            <a href="faq.html">FAQ</a>
-            <a href="resources.html">Resources</a>
+            <a href="faq">FAQ</a>
+            <a href="resources">Resources</a>
+            <a href="projectPage">Projects</a>
             <br><br>
             <div class="appIcons">
                 <a href="https://www.instagram.com/jetcompsci/"><img src="assets/link-icons/insta.png"></a>
