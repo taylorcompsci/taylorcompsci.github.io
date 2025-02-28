@@ -358,7 +358,6 @@ img {
     justify-self: center;
     display: block;
     justify-content: center;
-    
     text-align:center;
     @media (hover) {
         &:is(:hover, :focus-within) > .gridRow > .gridPiece:not(:hover, :focus-within) > img {
@@ -385,8 +384,8 @@ img {
 }
 
 .gridPiece > img {
-    width: 14vw;
-    height: 10vw;
+    width: 12vw;
+    height: 8vw;
     overflow: hidden;
     max-width: 175px;
     max-height: 125px;
