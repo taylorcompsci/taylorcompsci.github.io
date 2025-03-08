@@ -41,7 +41,7 @@ async function getProjectData(){
                 let imageLink = project.imageLink
                 gridPiece.innerHTML = `<img src=${imageLink} loading=lazy>`;
     
-                // gridPiece.onclick = () => {reload(project.projectLink)};
+                gridPiece.onclick = () => {reload(project.projectLink)};
     
                 rowDiv.appendChild(gridPiece)
     

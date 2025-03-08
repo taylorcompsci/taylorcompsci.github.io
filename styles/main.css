@@ -371,7 +371,7 @@ img {
 .gridRow {
     line-height: 0;
     display: flex;
-    gap: 0.2vw;
+    gap: 0.25vw;
     padding-bottom: 0.2vw;
 }
 
@@ -384,11 +384,11 @@ img {
 }
 
 .gridPiece > img {
-    width: 12vw;
-    height: 8vw;
+    width: 32vw;
+    height: 24vw;
     overflow: hidden;
-    max-width: 175px;
-    max-height: 125px;
+    max-width: 1000px;
+    max-height: 1000px;
     transition: all 0.5s linear 0s;
     transition-property: transform 0.3 ease-out, filter 0.3 ease-out;
     object-fit: cover;
@@ -432,7 +432,7 @@ img {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.75);
     color: white;
-    padding: 5px 10px;
+    padding: 10px 20px;
     font-size: 14px;
     border-radius: 5px;
     pointer-events: none;
