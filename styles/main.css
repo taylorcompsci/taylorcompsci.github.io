@@ -389,14 +389,14 @@ img {
     overflow: hidden;
     max-width: 175px;
     max-height: 125px;
-    transition: all 0.15s linear 0s;
-    transition-property: transform, filter;
+    transition: all 0.5s linear 0s;
+    transition-property: transform 0.3 ease-out, filter 0.3 ease-out;
     object-fit: cover;
     aspect-ratio: 1/1.5;
 }
 
 .gridPiece:hover  > img {
-    transform:scale(1.2);
+    transform:scale(1.3);
     overlay: hidden;
     cursor: pointer;
     overflow: hidden;
@@ -412,14 +412,14 @@ img {
     }
 
     .gridPiece > img {
-        width: 90vw;
+        width: 60vw;
         max-width: 90vw;
         height: 60vh;
         max-height: 60vh;
     }
 
     .gridPiece:hover > img {
-        transform: scale(1.2);
+        transform: scale(1.3);
     }
 
 
@@ -428,6 +428,20 @@ img {
 /* @media screen and (){
     
 } */
+.tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    pointer-events: none;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0;
+    z-index: 1000;
+}
 
 
 /* FAQ */
