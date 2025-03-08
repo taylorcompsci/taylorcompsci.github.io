@@ -72,12 +72,10 @@ addEventListener("load", async function(){
 });
 //wait until js is loaded
 setTimeout(() => {
-    console.log("hello?");
     const gridPieces = document.querySelectorAll(".gridPiece");
     console.log(gridPieces.length)
     gridPieces.forEach(piece => {
         piece.addEventListener("mouseenter", function(event) {
-            console.log("yes");
             let message = piece.getAttribute("data-message");
 
             // Create tooltip
