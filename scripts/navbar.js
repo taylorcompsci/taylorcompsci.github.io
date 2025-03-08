@@ -22,6 +22,7 @@ const navbar = () => {
                 <a href="faq">FAQ</a>
                 <a href="resources">Resources</a>
                 <a href="projectPage">Projects</a>
+                <a href="uploads">Upload a project</a>
             </div>
         </div>
 
@@ -37,6 +38,7 @@ const navbar = () => {
             <a href="faq">FAQ</a>
             <a href="resources">Resources</a>
             <a href="projectPage">Projects</a>
+            <a href="uploads">Upload a project</a>
             <br><br>
             <div class="appIcons">
                 <a href="https://www.instagram.com/jetcompsci/"><img src="assets/link-icons/insta.png"></a>
