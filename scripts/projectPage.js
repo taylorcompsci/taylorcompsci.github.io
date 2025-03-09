@@ -70,35 +70,42 @@ const reload = ( link ) => {
 addEventListener("load", async function(){
     getProjectData();
 });
-//wait until js is loaded
-setTimeout(() => {
-    const gridPieces = document.querySelectorAll(".gridPiece");
-    console.log(gridPieces.length)
-    gridPieces.forEach(piece => {
-        piece.addEventListener("mouseenter", function(event) {
-            let message = piece.getAttribute("data-message");
+//dynamically allocate tooltip
+document.addEventListener("mouseenter", function (event) {
+    if (!(event.target instanceof Element)) return; // Ensure it's an element
 
-            // Create tooltip
-            let tooltip = document.createElement("div");
-            tooltip.className = "tooltip";
-            tooltip.textContent = message;
-            document.body.appendChild(tooltip);
-            console.log(tooltip);
-            // Position tooltip
-            let rect = piece.getBoundingClientRect();
-            tooltip.style.left = `${rect.left + window.scrollX + rect.width / 2}px`;
-            tooltip.style.top = `${rect.top + window.scrollY - 30}px`;
+    let piece = event.target.closest(".gridPiece");
+    if (!piece || piece.tooltipElement) return; // Avoid duplicate tooltips
 
-            // Store tooltip reference for removal
-            piece.tooltipElement = tooltip;
-            tooltip.style.opacity = "1";
-        });
+    // Create tooltip
+    let message = piece.getAttribute("data-message") || "No message";
+    console.log("Tooltip triggered for:", piece);
 
-         piece.addEventListener("mouseleave", function() {
-             if (piece.tooltipElement) {
-                 piece.tooltipElement.remove();
-                 piece.tooltipElement = null;
-             }
-         });
-    });
-}, 500);
+    let tooltip = document.createElement("div");
+    tooltip.className = "tooltip";
+    tooltip.textContent = message;
+    document.body.appendChild(tooltip);
+
+    // Position tooltip
+    let rect = piece.getBoundingClientRect();
+    tooltip.style.left = `${rect.left + window.scrollX + rect.width / 2}px`;
+    tooltip.style.top = `${rect.top + window.scrollY - 30}px`;
+
+    // Store reference for removal
+    piece.tooltipElement = tooltip;
+
+    // Show tooltip
+    tooltip.style.opacity = "1";
+}, true); // Capturing phase ensures it works for dynamically added elements
+
+document.addEventListener("mouseleave", function (event) {
+    if (!(event.target instanceof Element)) return; // Ensure it's an element
+
+    let piece = event.target.closest(".gridPiece");
+    if (!piece || !piece.tooltipElement) return;
+
+    console.log("Removing tooltip for:", piece);
+    piece.tooltipElement.remove(); // Remove tooltip
+    piece.tooltipElement = null;  // Clear reference
+    console.log("Tooltip removed");
+}, true);
