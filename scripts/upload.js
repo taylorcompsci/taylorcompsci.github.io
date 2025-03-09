@@ -1,4 +1,41 @@
 
+
+async function duplicateChecker(xd) 
+{
+    var returnValue = false;
+    await fetch("https://5xu2xfigc4.execute-api.us-east-1.amazonaws.com/deployment", {
+        "method": "POST",
+        body: JSON.stringify({"Action":"Access"})
+        
+    }).then(response => {
+        if(!response.ok)
+            console.log("Error occured!");
+
+        return response.json();
+    }).then(data => {
+        const projects = JSON.parse(data).body;
+
+        for (let i = 0; i < projects.length; i++)
+        {
+            //console.log(projects[i].Name);
+            if (projects[i].Name === xd) returnValue = true;
+        }
+    });
+    console.log(returnValue);
+    return returnValue;
+}
+function isValidHttpUrl(string) {
+    let url;
+    
+    try {
+      url = new URL(string);
+    } catch (_) {
+      return false;  
+    }
+  
+    return url.protocol === "http:" || url.protocol === "https:";
+  }
+
 async function uploadPrj(name, projectLink, imageLink)
 {
     fetch("https://5xu2xfigc4.execute-api.us-east-1.amazonaws.com/deployment", {
@@ -32,6 +69,20 @@ async function uploadFile() {
     const nameInput = document.getElementById('Name').value;
     const projectInput = document.getElementById('projectLink').value;
     
+    //basic input validation, seperate from the apis to prevent overload
+    
+    if (await duplicateChecker(nameInput)) 
+    {
+        alert("duplicate Name");
+        return;
+    }
+    if (!isValidHttpUrl(projectInput))
+    {
+        alert("Not a valid url for your project");
+        return;
+    }
+    
+    //TODO profanity check and stuff but I'm too lazy
     if (fileInput.files.length === 0) {
         alert("Please select a image for your project (it would be very hard for us to give an idea of what your project looks like if don't)");
         return;
