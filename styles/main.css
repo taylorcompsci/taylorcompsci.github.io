@@ -384,15 +384,15 @@ img {
 }
 
 .gridPiece > img {
-    width: min(32vw, 50vh);   /* Ensure it respects viewport width & height */
-    height: min(24vw, 50vw);  /* Prevents excessive height */
-    max-width: 100%;          /* Prevents it from overflowing */
-    max-height: 100%;         /* Keeps it inside container */
-    overflow: hidden;
+    width: 32vw;
+    height: 24vw;
     
+    max-width: 295.672px;
+    max-height: 221.75px;
     transition: transform 0.3s ease-out, filter 0.3s ease-out;
     object-fit: cover;
-    aspect-ratio: 1/1.5;
+    aspect-ratio: 1.5;
+
 }
 
 .gridPiece:hover  > img {
@@ -413,9 +413,9 @@ img {
 
     .gridPiece > img {
         width: 60vw;
-        max-width: 90vw;
+        min-width: 418.188px;
         height: 60vh;
-        max-height: 60vh;
+        min-height: 442.188px;
     }
 
     .gridPiece:hover > img {
@@ -440,7 +440,7 @@ img {
     white-space: nowrap;
     transition: opacity 0.2s ease-in-out;
     opacity: 0;
-    z-index: 1000;
+    z-index: 2;
 }
 
 
