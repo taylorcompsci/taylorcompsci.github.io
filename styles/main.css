@@ -384,13 +384,13 @@ img {
 }
 
 .gridPiece > img {
-    width: 32vw;
-    height: 24vw;
+    width: min(32vw, 50vh);   /* Ensure it respects viewport width & height */
+    height: min(24vw, 50vw);  /* Prevents excessive height */
+    max-width: 100%;          /* Prevents it from overflowing */
+    max-height: 100%;         /* Keeps it inside container */
     overflow: hidden;
-    max-width: 1000px;
-    max-height: 1000px;
-    transition: all 0.5s linear 0s;
-    transition-property: transform 0.3 ease-out, filter 0.3 ease-out;
+    
+    transition: transform 0.3s ease-out, filter 0.3s ease-out;
     object-fit: cover;
     aspect-ratio: 1/1.5;
 }
