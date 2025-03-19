@@ -61,6 +61,12 @@ async function uploadPrj(name, projectLink, imageLink)
         console.error("Error:", error);
         alert("database upload failed.");
     });
+    const myPromise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            window.location.replace("/projectPage");
+        }, 300);
+    });
+    myPromise();
 }
 
 
