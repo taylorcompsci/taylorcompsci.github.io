@@ -39,7 +39,7 @@ async function getProjectData(){
                 gridPiece.classList.add("gridPiece");
                 gridPiece.setAttribute("data-message", project.Name)
                 let imageLink = project.imageLink
-                gridPiece.innerHTML = `<img src=${imageLink} loading=lazy>`;
+                gridPiece.innerHTML = `<img src=${imageLink} loading="lazy">`;
     
                 gridPiece.onclick = () => {reload(project.projectLink)};
     
